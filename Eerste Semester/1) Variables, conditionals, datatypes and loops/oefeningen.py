@@ -109,28 +109,80 @@ def priem_checker():
     elif is_prime:
         print("Prime")
 
+#11. Blad Steen Schaar
+
+def blad_steen_schaar():
+    choice = input("U gooit: ")
+    if choice.lower() == "blad":
+        print("You win!")
+    elif choice.lower() == "steen":
+        print("It's a draw")
+    elif choice.lower() == "schaar":
+        print("You lose...")
+    else:
+        print("That's not a choice dummy")
+
+#12. Sterkte van Wachtwoord
+
+def sterkte_van_wachtwoord():
+    lengte = False
+    nummer = False
+    hoofdletter = False
+    wachtwoord = input("Maak een Wachtwoord: ")
+    if len(wachtwoord) >= 8:
+        lengte = True
+    for i in wachtwoord:
+        if i.isupper():
+            hoofdletter = True
+        if i.isnumeric():
+            nummer = True
+    if lengte and hoofdletter and nummer:
+        print("Sterk")
+    else:
+        print("Zwak")
 
 
 
-project_number = int(input("Project Number:"))
+def project_selector():
+    project_number = int(input("Project Number (1-12):"))
 
-if project_number == 1:
-    Even_of_Oneven()
-elif project_number == 2:
-    Leeftijdscontrole()
-elif project_number == 3:
-    Tempratuurconverter()
-elif project_number == 4:
-    Calc()
-elif project_number == 5:
-    TipTop()
-elif project_number == 6:
-    Wachtwoordcontrole()
-elif project_number == 7:
-    Punten_omzetten()
-elif project_number == 8:
-    Tel_klinkers()
-elif project_number == 9:
-    som_van_getallen()
-elif project_number == 10:
-    priem_checker()
+    if project_number == 1:
+        Even_of_Oneven()
+        project_selector()
+    elif project_number == 2:
+        Leeftijdscontrole()
+        project_selector()
+    elif project_number == 3:
+        Tempratuurconverter()
+        project_selector()
+    elif project_number == 4:
+        Calc()
+        project_selector()
+    elif project_number == 5:
+        TipTop()
+        project_selector()
+    elif project_number == 6:
+        Wachtwoordcontrole()
+        project_selector()
+    elif project_number == 7:
+        Punten_omzetten()
+        project_selector()
+    elif project_number == 8:
+        Tel_klinkers()
+        project_selector()
+    elif project_number == 9:
+        som_van_getallen()
+        project_selector()
+    elif project_number == 10:
+        priem_checker()
+        project_selector()
+    elif project_number == 11:
+        blad_steen_schaar()
+        project_selector()
+    elif project_number == 12:
+        sterkte_van_wachtwoord()
+        project_selector()
+    else:
+        print("Not a Valid Project")
+        project_selector()
+project_selector()
