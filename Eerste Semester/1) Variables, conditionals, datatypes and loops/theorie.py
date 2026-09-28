@@ -1,5 +1,7 @@
+from operator import truediv
+
 x = 5
-#x is a veriable, an integer
+#x is a variable, an integer
 
 z = "EVERYONE GET IN THE CAR WE'RE LEAVING THIS TOWN NOW " #WHAT THE, THIS ISN'T THE CAR!? IMPOSSIBLE! AAHHHHH NOOOOOO AAAAAHHHHH HERMIT PURPLE
 
@@ -84,3 +86,19 @@ else:
 nummer = int(input("nummer:"))
 nummer += 5
 print(nummer)
+
+for i in range(10):
+    print(i)
+
+
+quitie = "no"
+while quitie != "yes":
+    print("Hewwooowow")
+    quitie = input("Do you want to qwuit? ")
+
+age = 11
+while age < 20:
+    print("not a pedo")
+    age = int(input("Age? "))
+
+
