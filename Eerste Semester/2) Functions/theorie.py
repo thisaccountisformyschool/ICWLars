@@ -59,3 +59,40 @@ def factori(getal):
         return getal * factori(getal-1)
 
 print(factori(999))
+
+
+naam = "bjorn"
+
+def vissen():
+    print(naam)
+    vis = "zalm"
+    print("je hebt een vis gevangen")
+
+vissen()
+#bloody fuck man scope and shittings bro
+#print(vis)
+
+
+#kan niet een global veranderen in een functie
+def vis22():
+    #print(naam)
+    naam = "giorno giovanna"
+
+address = "leuben"
+def gavisssenenenen(address):
+    address = "mehcalanen"
+    return address
+
+address = gavisssenenenen(address)
+print(address)
+
+
+#global var zorght evbppor dat je var buite skoop gerkane kan
+def gapissen65():
+    global address
+    address = "bwussel"
+
+gapissen65()
+print(address)
+
+#BIIIIGGG NO NO UP HERE
