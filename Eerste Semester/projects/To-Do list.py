@@ -66,7 +66,7 @@ def search():
     global taken
     search = input("Zoekterm: ")
     for i in taken:
-        if search in i:
+        if search in i[0]:
             print(i)
     print("")
     menu()
@@ -74,13 +74,13 @@ def search():
 
 def markeer_als_voltooid(nummer):
     global taken
-    print(taken)
     if not taken[nummer][2]:
         taken[nummer][2] = True
         print("Gemarkeert!")
     else:
         print("Is al gedaan")
     menu()
+
 
 
 def menu():
@@ -116,7 +116,7 @@ def menu():
     elif task == "6":
         exit()
     else:
-        print("Niet an optie!")
+        print("Niet een optie!")
         menu()
         return
 
