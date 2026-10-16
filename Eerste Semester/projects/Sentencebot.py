@@ -29,13 +29,15 @@ def alfabethicalizer(string):
     return words
 
 def palindromer(string):
+    palindrome_count = 0
     words = string.split()
     for word in words:
-        reversed_letters = word.split()
-        reversed_letters.sort(reverse=True)
-        print(reversed_letters)
-        reversed_word = "".join(reversed_letters)
-        print(reversed_word)
+        letters = list(word)
+        letters.reverse()
+        reversed_word = "".join(letters)
+        if reversed_word == word:
+            palindrome_count += 1
+    return palindrome_count
 
 def zinner(string):
     zin_tal = 0
@@ -48,7 +50,7 @@ def sentence_bot(string):
     print("Aantal lettergrepen:",tel_lettergrepen(string))
     print("Aantal woorden:",tel_woorden(string))
     print("Alfabetisch gerangschikt:",alfabethicalizer(string))
-    print(palindromer(string))
+    print("Palindromes:",palindromer(string))
     print("Aantal zinnen:",zinner(string))
 
 string = input("Sentence: ")
