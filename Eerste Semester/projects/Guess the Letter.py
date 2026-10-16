@@ -55,7 +55,7 @@ def game(attemps):
 def game_restart():                                                 #ziet of de speler wil herstarten
     restart = input("Do you want to play again? (yes or no) ")
     if restart.lower() == "yes":
-        game(5)
+        game(12)
     elif restart.lower() == "no":
         print("Toodles")
         exit()

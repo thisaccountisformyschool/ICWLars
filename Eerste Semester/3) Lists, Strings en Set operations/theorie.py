@@ -73,3 +73,58 @@ print(zindeling)
 print(zin.isnumeric())
 nummers = "18748932787"
 print(nummers.isnumeric())
+
+#tupel: zelfde als een lijst, maar items kunnen niet aangepast worden
+mijnTuple = (1,2,3)
+print(mijnTuple)
+
+
+#set: verzameling van elementen, zonder volgorde
+huisdieren = {"kat","hond","krokodil","papegaai","rat","otter"}
+print(huisdieren)
+
+#in een set komt elk element maar 1 keer voor
+huisdieren2 = {"kat","hond","krokodil","papegaai","rat","otter","hond","krokodil","kat"}
+print(huisdieren2)
+
+#element toevoegen in set
+huisdieren.add("hamster")
+#element verwijderen
+huisdieren.remove("krokodil")
+huisdieren.discard("hond")
+
+nummers2 = {1,2,3,4,5}
+print(max(nummers2))
+print(min(nummers2))
+print(sum(nummers2))
+
+huisdieren.update({"boa constrictor","Sjorje"})
+huisdieren.update({"micheal"})
+print(huisdieren)
+print(huisdieren2)
+
+#alles dat maar in een van de twee sets voorkomt
+print(huisdieren ^ huisdieren2)
+#wat bijde sets gelijk hebben
+print(huisdieren.intersection(huisdieren2))
+
+#bijde sets bij elkaar
+print(huisdieren.union(huisdieren2))
+print(huisdieren | huisdieren2)
+
+#subset is deel van een set
+#superset is het omgekeerde
+huisdieren3 ={"boa constrictor","Sjorje"}
+print(huisdieren3.issubset(huisdieren))
+print(huisdieren.issuperset(huisdieren3))
+
+#disjoint: twee sets hebben niks samen
+huisdieren4 = {"yodeler"}
+print(huisdieren4.isdisjoint(huisdieren))
+
+#sorted heeft de gesorteerde lijst terug
+huisdierlijst = sorted(huisdieren)
+print(huisdierlijst)
+
+#lijst naar set
+huisdierenset = set(huisdierlijst)
