@@ -22,7 +22,7 @@ def contact_toevoegen(naam,last_name,email,nummer):
 
 def print_contact(contact):
     for info in contact:
-        print(f"{info.capitalize()}")
+        print(f"{info.capitalize()}: {contact[info]}")
 
     # print(f"Naam: {contact["naam"]}")
     # print(f"Achteraam: {contact["last_naam"]}")
@@ -33,7 +33,7 @@ def sort_key_name(contact):
     return contact["naam"]
 
 def sort_key_last_name(contact):
-    return contact["last_naam"]
+    return contact["achternaam"]
 
 def contact_tonen():
     print("")
@@ -44,7 +44,7 @@ def contact_tonen():
         contacten.sort(key=sort_key_last_name)
     for i,contact in enumerate(contacten):
         i = str(i+1)
-        print(i+")",contact["naam"],contact["last_naam"])
+        print(i+")",contact["naam"],contact["achternaam"])
     choice = input()
     for i,contact in enumerate(contacten):
         i = str(i+1)
