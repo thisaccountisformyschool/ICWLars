@@ -1,0 +1,40 @@
+{
+  "chart": {
+    "title": "Share of terrestrial Key Biodiversity Areas that are protected",
+    "subtitle": "Proportion of terrestrial [Key Biodiversity Areas (KBAs)](#dod:key_biodiversity_area) that are covered by designated [protected areas](#dod:protected_area).",
+    "citation": "BirdLife International, IUCN and UNEP-WCMC",
+    "originalChartUrl": "https://ourworldindata.org/grapher/protected-terrestrial-biodiversity-sites?v=1&csvType=full&useColumnShortNames=false",
+    "selection": [
+      "Europe (UN)",
+      "Oceania (UN)",
+      "Northern America (UN)",
+      "Sub-Saharan Africa (UN)",
+      "Central and Southern Asia (UN)",
+      "Latin America and the Caribbean (UN)",
+      "World",
+      "Northern Africa and Western Asia (UN)",
+      "Eastern and South-Eastern Asia (UN)",
+      "Australia and New Zealand (UN)"
+    ]
+  },
+  "columns": {
+    "15.1.2 - Average proportion of Terrestrial Key Biodiversity Areas (KBAs) covered by protected areas (%) - ER_PTD_TERR": {
+      "titleShort": "Average proportion of Terrestrial Key Biodiversity Areas (KBAs) covered by protected areas (%)",
+      "titleLong": "Average proportion of Terrestrial Key Biodiversity Areas (KBAs) covered by protected areas (%)",
+      "descriptionShort": "Average proportion of Terrestrial Key Biodiversity Areas (KBAs) covered by protected areas (%)",
+      "shortUnit": "%",
+      "unit": "%",
+      "timespan": "2000-2024",
+      "type": "Numeric",
+      "owidVariableId": 1123945,
+      "shortName": "_15_1_2__er_ptd_terr",
+      "lastUpdated": "2025-10-29",
+      "nextUpdate": "2027-10-29",
+      "citationShort": "BirdLife International, IUCN and UNEP-WCMC – processed by Our World in Data",
+      "citationLong": "BirdLife International, IUCN and UNEP-WCMC – processed by Our World in Data. “Average proportion of Terrestrial Key Biodiversity Areas (KBAs) covered by protected areas (%)” [dataset]. BirdLife International, IUCN and UNEP-WCMC, “Data from multiple sources” [original data].",
+      "fullMetadata": "https://api.ourworldindata.org/v1/indicators/1123945.metadata.json"
+    }
+  },
+  "dateDownloaded": "2026-05-06",
+  "activeFilters": {}
+}

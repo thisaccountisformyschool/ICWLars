@@ -1,4 +1,5 @@
 import os
+import json
 print(dir(os))
 
 #toon current directory
@@ -47,11 +48,19 @@ except FileNotFoundError:
         epos.write("hello evernyan, I am a bird")
 
 
+leerling = {
+    "klas":"7ICW",
+    "naam":"Zeebe",
+    "leeftijd":18,
+    "hobbies": ["padel","zwemmen","badminton"]
+}
 
+with open("jason.json","w") as jason:
+    json.dump(leerling,jason)
 
-
-
-
+with open("jason.json","r") as jason:
+    big_leer = json.load(jason)
+    print(big_leer)
 
 
 

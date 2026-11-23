@@ -1,14 +1,21 @@
+import datetime
+
 def read_from_file():
     diary = []
-    with open("diary.txt", "r") as diary_file:
-        diary_text = diary_file.read()
-        diary_split = diary_text.split("\n")
-        diary_split.pop(-1)
+    try:
+        with open("diary.txt", "r") as diary_file:
+            diary_text = diary_file.read()
+            diary_split = diary_text.split("\n")
+            diary_split.pop(-1)
         for entry in diary_split:
             entry_split = entry.split(": ")
             diary.append({"date":entry_split[0],"text":entry_split[1]})
         print(diary)
         return diary
+    except FileNotFoundError:
+        diary_file = open("diary.txt","x")
+        return diary
+
 
 
 diary = read_from_file()
@@ -30,10 +37,33 @@ def menu():
     elif choice == 2:
         show_dairy()
     elif choice == 3:
-        pass
+        delete_entry()
     elif choice == 4:
         exit()
 
+def delete_entry():
+    date = input("Date: ")
+    amount = 0
+    diary_dated = []
+    for entry in diary:
+        if date == entry["date"]:
+            diary_dated.append(entry)
+            amount += 1
+    if amount > 1:
+        for entry in diary_dated:
+            print(f"{entry["date"]}: {entry["text"]}")
+            delete = input("Delete? (y/n) ")
+            if delete == "y":
+                diary.remove(entry)
+            if delete == "n":
+                pass
+
+    elif amount == 1:
+        diary.remove(diary_dated[0])
+    elif amount == 0:
+        print("No entry on that date")
+
+    write_to_file()
 
 def show_dairy():
     print("")
@@ -43,8 +73,8 @@ def show_dairy():
 
 def add_diary_entry():
     print("")
-    datum = input("Datum: ")
-    tekst = input("Inhoud: ")
+    datum = input("Date: ")
+    tekst = input("Text: ")
     diary.append({"date":datum,"text":tekst})
     write_to_file()
 
